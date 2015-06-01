@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='rhubarbApp'>
+  <head>
+    <title>Rhubarb - Seasonal food reminder</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' rel='stylesheet'>
+    <link href='stylesheets/app.css' rel='stylesheet'>
+  </head>
+  <body ng-controller='MainController'>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='panel pane-default col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4'>
+          <h1 class='text-center'>
+            Never forget <span class="food">strawberry</span> season
+          </h1>
+          <p>
+            <small class='help-block text-center'>
+              Remind me when yummy veggies & fruit come in season.
+            </small>
+          </p>
+          <form name='forms.signup'>
+            <p class='input-group' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
+              <span class='input-group-addon'>
+                <span class='icon-envelope'></span>
+              </span>
+              <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email'>
+            </p>
+            <p class='help-block text-center'>
+              <small>Won't send unrequested emails</small>
+            </p>
+            <p class='text-center'>
+              <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()">Ok, me dum-dum</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
+    <script src='javascripts/app.js'></script>
+  </body>
+</html>
+
