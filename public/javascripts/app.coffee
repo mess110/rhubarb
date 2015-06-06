@@ -6,12 +6,24 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
   $scope.buttonText = "Signup for monthly emails"
   $scope.showList = false
   $scope.forms = {}
+  $scope.items = []
 
   $scope.ok = ->
     $scope.email && $scope.forms.signup.email.$valid
 
   $scope.notOk = ->
     $scope.forms.signup.email.$invalid
+
+  $scope.getItems = ->
+    req =
+      method: 'GET'
+      url: '/rhubarb_item.json'
+
+    $http(req).success((data) ->
+      $scope.items = data
+    ).error((data) ->
+      console.log data
+    )
 
   $scope.subscribe = ->
     req =
@@ -32,5 +44,7 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
 
   $scope.fruitText = (hovered) ->
     if hovered then 'rhubarb' else 'strawberry'
+
+  $scope.getItems()
 
   return

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'ki'
+gem 'ki', '0.4.8'
 gem 'sendgrid-ruby'
 
 group :test do

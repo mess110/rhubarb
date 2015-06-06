@@ -20,25 +20,40 @@
             </div>
           </h1>
           <p>
-            <small class='help-block text-center'>
-              Remind me when <a ng-click="showList = true">yummy veggies & fruit</a> come in season.
-            </small>
+          <small class='help-block text-center'>
+            Remind me when <a ng-click="showList = !showList">yummy veggies & fruit</a> come in season.
+          </small>
           </p>
           <div ng-show="showList">
-            <p>TODO</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>fruit</th>
+                  <th>start</th>
+                  <th>end</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in items">
+                  <td>{{item.title}}</td>
+                  <td>{{item.start_date}}</td>
+                  <td>{{item.end_date}}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <form name='forms.signup'>
-            <p class='input-group' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
-              <span class='input-group-addon'>
-                <span class='icon-envelope'></span>
-              </span>
-              <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email'>
+            <p class='input-group self-center' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
+            <span class='input-group-addon'>
+              <span class='icon-envelope'></span>
+            </span>
+            <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email'>
             </p>
             <p class='help-block text-center'>
-              <small>{{toastText}}</small>
+            <small>{{toastText}}</small>
             </p>
             <p class='text-center'>
-              <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()">{{buttonText}}</button>
+            <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()">{{buttonText}}</button>
             </p>
           </form>
         </div>

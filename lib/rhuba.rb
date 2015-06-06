@@ -40,7 +40,7 @@ end
 
 class Rhubarb
 
-  REQUIRED_KEYS = %w(key start_date end_date)
+  REQUIRED_KEYS = %w(title start_date end_date)
 
   # Finds what is good on a specific date
   def self.whats_good(date = Time.now)
@@ -56,20 +56,20 @@ class Rhubarb
     validate_array(array)
     s = ""
     array.each do |e|
-      s += "#{e[:key]}: #{e[:start_date].nowify.pretify} -> #{e[:end_date].nowify.pretify}\n"
+      s += "#{e[:title]}: #{e[:start_date].nowify.pretify} -> #{e[:end_date].nowify.pretify}\n"
     end
     s
   end
 
   def self.tldr(array)
     validate_array(array)
-    "TLDR: #{array.collect{|e| e[:key]}.join(', ')}"
+    "TLDR: #{array.collect{|e| e[:title]}.join(', ')}"
   end
 
   def self.all
     [
       {
-        key: 'rhubarb',
+        title: 'rhubarb',
         start_date: '2001-04-01',
         end_date: '2001-06-01',
         img: {

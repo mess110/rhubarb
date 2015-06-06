@@ -36,7 +36,7 @@ GEM
     hitimes (1.2.2)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    ki (0.4.7)
+    ki (0.4.8)
       bson_ext
       bundler (~> 1.5)
       coffee-script
@@ -109,7 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   guard-rspec
-  ki
+  ki (= 0.4.8)
   rspec
   sendgrid-ruby
 
