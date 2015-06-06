@@ -8,7 +8,7 @@ set :repo_url, 'https://github.com/mess110/rhubarb'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/kiki/rhubarb'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -35,6 +35,7 @@ set :repo_url, 'https://github.com/mess110/rhubarb'
 # set :keep_releases, 5
 
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+set :rvm_ruby_version, '2.1.0@rhubarb'
 
 namespace :deploy do
 
