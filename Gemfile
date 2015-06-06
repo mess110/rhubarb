@@ -4,6 +4,7 @@ gem 'ki', '0.4.8'
 gem 'sendgrid-ruby'
 gem 'capistrano'
 gem 'capistrano-rvm'
+gem 'capistrano-bundler'
 gem 'whenever', require: false
 
 group :test do
