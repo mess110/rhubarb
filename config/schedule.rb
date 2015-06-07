@@ -17,4 +17,8 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
+every 1.minute do
+  command "/home/kiki/rhubarb.northpole.ro/current/cron.sh"
+end
+
 # Learn more: http://github.com/javan/whenever
