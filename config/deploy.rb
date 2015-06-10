@@ -43,7 +43,7 @@ namespace :deploy do
   task :seed do
     on roles(:web), limit: 3, wait: 10 do
       within release_path do
-        execute 'RACK_ENV=production ki task seed'
+        execute './seed.sh'
       end
     end
   end
