@@ -62,7 +62,7 @@ class Rhubarb
     validate_array(array)
     s = ""
     array.each do |e|
-      s += e.to_rhubarb
+      s += "#{e.to_rhubarb}\n"
     end
     s
   end

@@ -17,7 +17,7 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.hour do
+every 1.day, at: '11:30 am' do
   command "/home/kiki/rhubarb.northpole.ro/current/cron.sh"
 end
 
