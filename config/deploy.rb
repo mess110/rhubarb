@@ -48,14 +48,14 @@ namespace :deploy do
     end
   end
 
-  # after :restart, :clear_cache do
-    # on roles(:web), in: :groups, limit: 3, wait: 10 do
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
-      # within release_path do
+      within release_path do
         # execute 'RACK_ENV=production ki task seed'
-      # end
-    # end
-  # end
+      end
+    end
+  end
 
 end
 

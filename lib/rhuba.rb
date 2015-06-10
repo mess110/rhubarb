@@ -71,11 +71,16 @@ class Rhubarb
       {
         title: 'rhubarb',
         start_date: '2001-04-01',
-        end_date: '2001-06-01',
+        end_date: '2001-06-31',
         img: {
           src: 'https://stocksnap.io/photo/YOU6942709',
           direct: 'https://snap-photos.s3.amazonaws.com/img-thumbs/960w/YOU6942709.jpg'
         }
+      },
+      {
+        title: 'strawberries',
+        start_date: '2001-05-31',
+        end_date: '2001-07-31'
       }
     ]
   end
@@ -94,8 +99,8 @@ class Rhubarb
       ['nectarines',   0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
       ['peaches',      0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
       ['plums',        0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
-      ['rhubarb',      0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-      ['strawberries', 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+      ['rhubarb',      0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+      ['strawberries', 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
 
       # Vegatables     J  F  M  A  M  I  I  A  S  O  N  D
     ]
