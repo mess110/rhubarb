@@ -47,6 +47,11 @@ end
 class Rhubarb
 
   REQUIRED_KEYS = %w(title start_date end_date)
+  GREETINGS = %w(Aloha Ahoy Bonjour G'day Hello Hallo Hey Hi Hola Howdy Rawr Salutations Salut Sup Yo)
+
+  def self.random_greeting
+    GREETINGS.sample
+  end
 
   # Finds what is good on a specific date
   def self.whats_good(date = Time.now)

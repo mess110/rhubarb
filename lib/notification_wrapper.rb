@@ -12,7 +12,7 @@ class NotificationWrapper
     puts "#{user['email']} has been notified"
 
     mail = SendGrid::Mail.new(to: user['email'],
-                              from: 'no-reply@rhubarb.herokuapp.com',
+                              from: 'no-reply@rhubarb.northpole.ro',
                               subject: subject, text: msg, html: msg)
 
     client.send(mail)
