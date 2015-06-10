@@ -27,7 +27,7 @@ describe Rhubarb do
 
   it 'formats' do
     results = Rhubarb.format(rhuarb_season)
-    expect(results).to include('rhubarb: beginning of April -> beginning of June')
+    expect(results).to include('rhubarb: beginning of April -> end of June')
   end
 
   it 'generates tldr' do
