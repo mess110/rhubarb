@@ -39,13 +39,24 @@ set :rvm_ruby_version, '2.1.0@rhubarb'
 
 namespace :deploy do
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
+  desc "seed"
+  task :seed do
+    on roles(:web), limit: 3, wait: 10 do
       within release_path do
         execute 'RACK_ENV=production ki task seed'
       end
     end
   end
 
+  # after :restart, :clear_cache do
+    # on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+        # execute 'RACK_ENV=production ki task seed'
+      # end
+    # end
+  # end
+
 end
+
+after :deploy, "deploy:seed"
