@@ -9,58 +9,12 @@
 
     <link href='stylesheets/app.css' rel='stylesheet'>
   </head>
-  <body ng-controller='MainController'>
-    <div class='container'>
-      <div class='row'>
-        <div class='panel pane-default col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4'>
-          <h1 class='text-center' ng-mouseenter="hovered = true" ng-mouseleave="hovered = false">
-            <div>Never forget</div>
-            <div>
-              <span ng-class="{ 'red': !hovered, 'orange': hovered }">{{fruitText(hovered)}}</span> season
-            </div>
-          </h1>
-          <p>
-          <small class='help-block text-center'>
-            Remind me when <a ng-click="showList = !showList">these</a> come in season.
-          </small>
-          </p>
-          <div ng-show="showList">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>fruit</th>
-                  <th>start</th>
-                  <th>end</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="item in items">
-                  <td>{{item.title}}</td>
-                  <td>{{item.start_date}}</td>
-                  <td>{{item.end_date}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <form name='forms.signup'>
-            <p class='input-group self-center' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
-            <span class='input-group-addon'>
-              <span class='icon-envelope'></span>
-            </span>
-            <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email' auto-focus>
-            </p>
-            <p class='help-block text-center'>
-            <small>{{toastText}}</small>
-            </p>
-            <p class='text-center'>
-            <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()">{{buttonText}}</button>
-            </p>
-          </form>
-        </div>
-      </div>
+  <body>
+    <div class='container' ng-view>
     </div>
 
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js'></script>
 
     <script src='javascripts/app.js'></script>
   </body>

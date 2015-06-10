@@ -1,0 +1,23 @@
+<div class='row'>
+  <div class='panel pane-default col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4'>
+    <h1 class='text-center' ng-mouseenter="hovered = true" ng-mouseleave="hovered = false">
+      Unsubscribe
+    </h1>
+    <p>
+    <small class='help-block text-center'>
+      Thanks for using the service, I hope it was useful.
+    </small>
+    </p>
+    <form name='forms.signup'>
+      <p class='input-group self-center' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
+      <span class='input-group-addon'>
+        <span class='icon-envelope'></span>
+      </span>
+      <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email' auto-focus>
+      </p>
+      <p class='text-center'>
+      <button class='btn btn-success btn-lg' ng-click='unsubscribe()' ng-disabled="!ok()">Unsubscribe</button>
+      </p>
+    </form>
+  </div>
+</div>

@@ -1,5 +1,12 @@
-rhubarbApp = angular.module('rhubarbApp', [])
+rhubarbApp = angular.module('rhubarbApp', ['ngRoute'])
 
+
+rhubarbApp.config ($routeProvider) ->
+  $routeProvider
+    .when('/', templateUrl: 'views/subscribe.html', controller: 'MainController')
+    .when('/unsubscribe/:id', templateUrl: 'views/unsubscribe.html', controller: 'UnsubscribeController')
+    .otherwise redirectTo: '/'
+  return
 
 rhubarbApp.directive 'autoFocus', ($timeout) ->
   {
@@ -58,5 +65,32 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
     if hovered then 'rhubarb' else 'strawberry'
 
   $scope.getItems()
+
+  return
+
+rhubarbApp.controller 'UnsubscribeController', ($scope, $http, $routeParams) ->
+
+  $scope.ok = ->
+    $scope.email && $scope.forms.signup.email.$valid
+
+  $scope.notOk = ->
+    $scope.forms.signup.email.$invalid
+
+  $scope.unsubscribe = ->
+    req =
+      method: 'DELETE'
+      url: '/rhubarb_user.json'
+      data:
+        id: $routeParams.id
+        email: $scope.email
+
+    $http(req).success((data) ->
+      console.log data
+    ).error((data) ->
+      console.log data
+      $scope.forms.signup.email.$invalid = true
+      # if data.error.indexOf('found') != -1
+        # $scope.buttonText = 'Email already registered'
+    )
 
   return
