@@ -10,7 +10,7 @@
     <link href='stylesheets/app.css' rel='stylesheet'>
   </head>
   <body ng-controller='MainController'>
-    <div class='container-fluid'>
+    <div class='container'>
       <div class='row'>
         <div class='panel pane-default col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4'>
           <h1 class='text-center' ng-mouseenter="hovered = true" ng-mouseleave="hovered = false">
@@ -21,7 +21,7 @@
           </h1>
           <p>
           <small class='help-block text-center'>
-            Remind me when <a ng-click="showList = !showList">yummy veggies & fruit</a> come in season.
+            Remind me when <a ng-click="showList = !showList">these</a> come in season.
           </small>
           </p>
           <div ng-show="showList">
@@ -47,7 +47,7 @@
             <span class='input-group-addon'>
               <span class='icon-envelope'></span>
             </span>
-            <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email'>
+            <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email' auto-focus>
             </p>
             <p class='help-block text-center'>
             <small>{{toastText}}</small>

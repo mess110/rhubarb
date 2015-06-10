@@ -1,5 +1,17 @@
 rhubarbApp = angular.module('rhubarbApp', [])
 
+
+rhubarbApp.directive 'autoFocus', ($timeout) ->
+  {
+    restrict: 'AC'
+    link: (_scope, _element) ->
+      $timeout (->
+        _element[0].focus()
+        return
+      ), 0
+      return
+  }
+
 rhubarbApp.controller 'MainController', ($scope, $http) ->
   $scope.email = ''
   $scope.toastText = "Won't send unrequested emails"
