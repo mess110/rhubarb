@@ -144,6 +144,16 @@ class Rhubarb
         end_date: '2001-09-15',
       },
       {
+        title: 'cherries',
+        start_date: '2001-05-15',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'strawberries',
+        start_date: '2001-05-15',
+        end_date: '2001-07-31'
+      },
+      {
         title: 'rosemary',
         start_date: '2001-05-01',
         end_date: '2001-05-31',
@@ -204,6 +214,11 @@ class Rhubarb
         end_date: '2001-07-31'
       },
       {
+        title: 'tomatoes',
+        start_date: '2001-06-01',
+        end_date: '2001-09-15'
+      },
+      {
         title: 'blackberries', # mure
         start_date: '2001-07-01',
         end_date: '2001-07-31'
@@ -237,11 +252,6 @@ class Rhubarb
         title: 'cantaloupe',
         start_date: '2001-07-07',
         end_date: '2001-08-31'
-      },
-      {
-        title: 'tomatoes',
-        start_date: '2001-06-01',
-        end_date: '2001-09-15'
       },
       {
         title: 'kohlrabi', # gulie
@@ -329,6 +339,11 @@ class Rhubarb
         end_date: '2001-09-30'
       },
       {
+        title: 'cabbage',
+        start_date: '2001-08-01',
+        end_date: '2001-10-15'
+      },
+      {
         title: 'grapes',
         start_date: '2001-09-01',
         end_date: '2001-09-30'
@@ -336,11 +351,6 @@ class Rhubarb
       {
         title: 'leek', # praz
         start_date: '2001-09-01',
-        end_date: '2001-10-15'
-      },
-      {
-        title: 'cabbage',
-        start_date: '2001-08-01',
         end_date: '2001-10-15'
       },
       {
@@ -353,16 +363,6 @@ class Rhubarb
         start_date: '2001-01-01',
         end_date: '2001-02-28'
       },
-      {
-        title: 'cherries',
-        start_date: '2001-05-15',
-        end_date: '2001-07-31'
-      },
-      {
-        title: 'strawberries',
-        start_date: '2001-05-15',
-        end_date: '2001-07-31'
-      }
     ]
   end
 

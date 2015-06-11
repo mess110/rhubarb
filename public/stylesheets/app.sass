@@ -11,6 +11,12 @@ body
   font-family: "Open Sans",serif
   background: transparent
 
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -o-user-select: none
+  user-select: none
+
 h1
   font-family: "Abel", Arial, sans-serif
   font-weight: 400
@@ -29,6 +35,9 @@ h1
   max-width: 280px
   margin-left: auto
   margin-right: auto
+
+table.table > tbody > tr:first-child > td:first-child
+  width: 50%
 
 [ng-click],
 [data-ng-click],

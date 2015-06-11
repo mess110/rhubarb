@@ -12,24 +12,31 @@
     </small>
     </p>
     <div ng-show="showList">
+      <div ng-show="items.length" class="text-center">
+        <a class="btn btn-default pull-left" ng-disabled="page == 0" ng-click="page=page-1">PREV</a>
+        <span class="text-center">Page {{page + 1}} of {{ numberOfPages() }}</span>
+        <a class="btn btn-default pull-right" ng-disabled="page >= items.length / pageSize - 1" ng-click="page = page + 1">NEXT </a>
+      </div>
       <table class="table">
         <thead>
-          <tr>
-            <th>fruit</th>
-            <th>start</th>
-            <th>end</th>
-          </tr>
+          <!-- <tr> -->
+          <!-- <th>fruit</th> -->
+          <!-- <th>start</th> -->
+          <!-- <th>end</th> -->
+          <!-- </tr> -->
         </thead>
         <tbody>
-          <tr ng-repeat="item in items">
+          <tr ng-repeat="item in items | pagination: page * pageSize | limitTo: pageSize">
             <td>{{item.title}}</td>
-            <td>{{item.start_date}}</td>
-            <td>{{item.end_date}}</td>
+            <td>{{formatDate(item.start_date)}}</td>
+            <td>{{formatDate(item.end_date)}}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <form name='forms.signup'>
+
+
       <p class='input-group self-center' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
       <span class='input-group-addon'>
         <span class='icon-envelope'></span>

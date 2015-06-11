@@ -8,6 +8,11 @@ rhubarbApp.config ($routeProvider) ->
     .otherwise redirectTo: '/'
   return
 
+rhubarbApp.filter 'pagination', ->
+  (input, start) ->
+    start = +start
+    input.slice start
+
 rhubarbApp.directive 'autoFocus', ($timeout) ->
   {
     restrict: 'AC'
@@ -22,7 +27,7 @@ rhubarbApp.directive 'autoFocus', ($timeout) ->
 rhubarbApp.controller 'MainController', ($scope, $http) ->
   $scope.email = ''
   $scope.toastText = "Won't send unrequested emails"
-  $scope.buttonText = "Signup for monthly emails"
+  $scope.buttonText = "Signup for bi-monthly emails"
   $scope.showList = false
   $scope.forms = {}
   $scope.items = []
@@ -44,6 +49,17 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
       console.log data
     )
 
+
+  $scope.page = 0
+  $scope.pageSize = 7
+
+  $scope.numberOfPages = ->
+    Math.ceil $scope.items.length / $scope.pageSize
+
+  $scope.formatDate = (date) ->
+    da = new Date(date).toDateString().split(' ')
+    "#{da[1]} #{da[2]}"
+
   $scope.subscribe = ->
     req =
       method: 'POST'
@@ -58,7 +74,7 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
       $scope.forms.signup.email.$invalid = true
 
       if data.error.indexOf('unique') != -1
-        $scope.buttonText = 'Email already registered'
+        $scope.toastText = 'Email already registered'
     )
 
   $scope.fruitText = (hovered) ->
