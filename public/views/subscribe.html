@@ -19,11 +19,6 @@
       </div>
       <table class="table">
         <thead>
-          <!-- <tr> -->
-          <!-- <th>fruit</th> -->
-          <!-- <th>start</th> -->
-          <!-- <th>end</th> -->
-          <!-- </tr> -->
         </thead>
         <tbody>
           <tr ng-repeat="item in items | pagination: page * pageSize | limitTo: pageSize">
@@ -35,19 +30,17 @@
       </table>
     </div>
     <form name='forms.signup'>
-
-
       <p class='input-group self-center' ng-class="{ 'has-error': notOk(), 'has-success': ok() }">
       <span class='input-group-addon'>
         <span class='icon-envelope'></span>
       </span>
-      <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email' auto-focus>
+      <input class='form-control input-lg' name='email' ng-model='email' placeholder='jonsnow@knowsnothi.ng' type='email' auto-focus ng-disabled="success">
       </p>
       <p class='help-block text-center'>
       <small>{{toastText}}</small>
       </p>
       <p class='text-center'>
-      <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()">{{buttonText}}</button>
+      <button class='btn btn-success btn-lg' ng-click='subscribe()' ng-disabled="!ok()" ng-show="!success">{{buttonText}}</button>
       </p>
     </form>
   </div>

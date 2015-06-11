@@ -3,7 +3,7 @@ rhubarbApp = angular.module('rhubarbApp', ['ngRoute'])
 
 rhubarbApp.config ($routeProvider) ->
   $routeProvider
-    .when('/', templateUrl: 'views/subscribe.html', controller: 'MainController')
+    .when('/', templateUrl: 'views/subscribe.html', controller: 'SubscribeController')
     .when('/unsubscribe/:id', templateUrl: 'views/unsubscribe.html', controller: 'UnsubscribeController')
     .otherwise redirectTo: '/'
   return
@@ -24,7 +24,7 @@ rhubarbApp.directive 'autoFocus', ($timeout) ->
       return
   }
 
-rhubarbApp.controller 'MainController', ($scope, $http) ->
+rhubarbApp.controller 'SubscribeController', ($scope, $http) ->
   $scope.email = ''
   $scope.toastText = "Won't send unrequested emails"
   $scope.buttonText = "Signup for bi-monthly emails"
@@ -68,7 +68,8 @@ rhubarbApp.controller 'MainController', ($scope, $http) ->
         email: $scope.email
 
     $http(req).success((data) ->
-      console.log data
+      $scope.toastText = 'Success!'
+      $scope.success = true
     ).error((data) ->
       console.log data
       $scope.forms.signup.email.$invalid = true
