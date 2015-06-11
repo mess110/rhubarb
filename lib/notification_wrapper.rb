@@ -13,7 +13,7 @@ class NotificationWrapper
 
     mail = SendGrid::Mail.new(to: user['email'],
                               from: 'no-reply@rhubarb.northpole.ro',
-                              subject: subject, text: msg, html: msg)
+                              subject: subject, text: msg, html: msg.gsub("\n", "<br />"))
 
     client.send(mail)
   end
