@@ -89,31 +89,280 @@ class Rhubarb
         }
       },
       {
+        title: 'nettle', # urzică
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'parsley', # pătrunjel
+        start_date: '2001-03-01',
+        end_date: '2001-09-15',
+      },
+      {
+        title: 'lovage', # leuștean
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'wild garlic', # leurdă
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'green salad', # salată verde
+        start_date: '2001-03-01',
+        end_date: '2001-06-15',
+      },
+      {
+        title: 'green onion', # ceapă verde
+        start_date: '2001-03-01',
+        end_date: '2001-06-15',
+      },
+      {
+        title: 'garlic',
+        start_date: '2001-03-01',
+        end_date: '2001-06-15',
+      },
+      {
+        title: 'spinach',
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'rucola',
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'dill',
+        start_date: '2001-03-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'mint',
+        start_date: '2001-04-01',
+        end_date: '2001-09-15',
+      },
+      {
+        title: 'rosemary',
+        start_date: '2001-05-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'elderflower', # flori de soc
+        start_date: '2001-05-01',
+        end_date: '2001-05-31',
+      },
+      {
+        title: 'carrot',
+        start_date: '2001-05-01',
+        end_date: '2001-07-31',
+      },
+      {
+        title: 'parsnip', # păstârnac
+        start_date: '2001-05-01',
+        end_date: '2001-07-15',
+      },
+      {
+        title: 'radishes', # ridichi
+        start_date: '2001-05-01',
+        end_date: '2001-07-15',
+      },
+      {
+        title: 'basil', # busuioc
+        start_date: '2001-05-15',
+        end_date: '2001-08-15',
+      },
+      {
+        title: 'pine nuts', # muguri de brad sirop
+        start_date: '2001-05-01',
+        end_date: '2001-07-15',
+      },
+      {
+        title: 'sour cherries', # vișine
+        start_date: '2001-06-01',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'raspberries',
+        start_date: '2001-06-01',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'squash', # dovlecel
+        start_date: '2001-06-01',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'apricots', # caise
+        start_date: '2001-06-15',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'peas', # mazăre
+        start_date: '2001-06-15',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'blackberries', # mure
+        start_date: '2001-07-01',
+        end_date: '2001-07-31'
+      },
+      {
+        title: 'red pepper',
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'hot pepper',
+        start_date: '2001-07-15',
+        end_date: '2001-09-15'
+      },
+      {
+        title: 'celery', # țelină
+        start_date: '2001-07-15',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'egg plant',
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'watermelons',
+        start_date: '2001-07-07',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'cantaloupe',
+        start_date: '2001-07-07',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'tomatoes',
+        start_date: '2001-06-01',
+        end_date: '2001-09-15'
+      },
+      {
+        title: 'kohlrabi', # gulie
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'black radish',
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'beet', # sfeclă
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'horseradish', # hrean
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'bean pods', # fasole pastai
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'cranberries', # afine
+        start_date: '2001-07-15',
+        end_date: '2001-08-31'
+      },
+      {
+        title: 'beans', # fasole boabe
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'cucumber',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'potatoes',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'apples',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'pears',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'quince', # gutui
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'plums',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'nuts',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'dry onion',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'cauliflower',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'broccoli',
+        start_date: '2001-08-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'grapes',
+        start_date: '2001-09-01',
+        end_date: '2001-09-30'
+      },
+      {
+        title: 'leek', # praz
+        start_date: '2001-09-01',
+        end_date: '2001-10-15'
+      },
+      {
+        title: 'cabbage',
+        start_date: '2001-08-01',
+        end_date: '2001-10-15'
+      },
+      {
+        title: 'sea buckthorn', # cătină
+        start_date: '2001-09-01',
+        end_date: '2001-11-30'
+      },
+      {
+        title: 'turnips', # napi
+        start_date: '2001-01-01',
+        end_date: '2001-02-28'
+      },
+      {
+        title: 'cherries',
+        start_date: '2001-05-15',
+        end_date: '2001-07-31'
+      },
+      {
         title: 'strawberries',
-        start_date: '2001-05-31',
+        start_date: '2001-05-15',
         end_date: '2001-07-31'
       }
-    ]
-  end
-
-  def self.table
-    [
-      ['none',         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-
-      # Fruit          J  F  M  A  M  I  I  A  S  O  N  D
-      ['apricots',     0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
-      ['blackberries', 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-      ['blueberries',  0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-      ['cherries',     0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
-      ['grapes',       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
-      ['melons',       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0],
-      ['nectarines',   0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-      ['peaches',      0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
-      ['plums',        0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
-      ['rhubarb',      0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-      ['strawberries', 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-
-      # Vegatables     J  F  M  A  M  I  I  A  S  O  N  D
     ]
   end
 
