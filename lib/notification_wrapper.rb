@@ -1,9 +1,8 @@
 require 'sendgrid-ruby'
 
 class NotificationWrapper
-  def self.client api_user=nil, api_key=nil
+  def self.client api_key=nil
     SendGrid::Client.new do |c|
-      c.api_user = api_user || ENV['SENDGRID_USERNAME']
       c.api_key = api_key || ENV['SENDGRID_PASSWORD']
     end
   end
